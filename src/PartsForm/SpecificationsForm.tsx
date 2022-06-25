@@ -3,6 +3,7 @@ import { Brakes, Engine, Gearbox, Tires } from "../Interfaces/Interfaces";
 import { specificationsFormClasses as classes, StyledSpecificationsForm } from "./StyledSpecificationsForm";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from "react";
+import { Header } from "../Header/Header";
 
 const brakesInput: Brakes = {
     image: "",
@@ -98,19 +99,21 @@ export const SpecificationsForm = () => {
     };
 
     return (
+        <>
+        <Header/>
         <StyledSpecificationsForm container justifyContent="center" alignItems="center">
-            <Grid container sx={{width: "100%"}} justifyContent="center" alignItems="center">
-                <FormControl sx={{ width: "500px", height: "200px", justifyContent: "center", alignItems: "center", border: "1px dashed black", borderRadius: "5px",}}>
-                    <input type="file" onChange={onSubmit} style={{position: "absolute", left: "0", top: "0", opacity: "0%", width: "100%", height: "100%"}}/>
+            <Grid container sx={{ width: "100%" }} justifyContent="center" alignItems="center">
+                <FormControl sx={{ width: "500px", height: "200px", justifyContent: "center", alignItems: "center", border: "1px dashed black", borderRadius: "5px", }}>
+                    <input type="file" onChange={onSubmit} style={{ position: "absolute", left: "0", top: "0", opacity: "0%", width: "100%", height: "100%" }} />
                     <Typography color="primary">Click or drag to upload a file</Typography>
                 </FormControl>
             </Grid>
-            <Grid item lg={4} margin={"20px 20px 200px 20px"} flexDirection="column" justifyContent={"center"} alignItems={"center"}>                
+            <Grid item lg={4} margin={"20px 20px 200px 20px"} flexDirection="column" justifyContent={"center"} alignItems={"center"}>
                 <Accordion className={classes.accordion}>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
                     >
                         <Typography>Brakes</Typography>
                     </AccordionSummary>
@@ -118,34 +121,34 @@ export const SpecificationsForm = () => {
                         <FormControl color="primary" className={classes.formControl}>
                             <InputLabel>Pad wear</InputLabel>
                             <Input value={brakes.specification.padWear} onChange={(e) => {
-                                setBrakes({...brakes, specification: { ...brakes.specification, padWear: e.target.value}, })
-                            }}></Input>
+                                setBrakes({ ...brakes, specification: { ...brakes.specification, padWear: e.target.value }, });
+                            } }></Input>
                         </FormControl>
                         <FormControl color="primary" className={classes.formControl}>
                             <InputLabel>Control</InputLabel>
                             <Input value={brakes.specification.control} onChange={(e) => {
-                                setBrakes({...brakes, specification: { ...brakes.specification, control: e.target.value}, })
-                            }}></Input>
+                                setBrakes({ ...brakes, specification: { ...brakes.specification, control: e.target.value }, });
+                            } }></Input>
                         </FormControl>
                         <FormControl color="primary" className={classes.formControl}>
                             <InputLabel>Mean Friction</InputLabel>
                             <Input value={brakes.specification.meanFriction} onChange={(e) => {
-                                setBrakes({...brakes, specification: { ...brakes.specification, meanFriction: e.target.value}, })
-                            }}></Input>
+                                setBrakes({ ...brakes, specification: { ...brakes.specification, meanFriction: e.target.value }, });
+                            } }></Input>
                         </FormControl>
                         <FormControl color="primary" className={classes.formControl}>
                             <InputLabel>Heat Conduct</InputLabel>
                             <Input value={brakes.specification.heatConduct} onChange={(e) => {
-                                setBrakes({...brakes, specification: { ...brakes.specification, heatConduct: e.target.value}, })
-                            }}></Input>
+                                setBrakes({ ...brakes, specification: { ...brakes.specification, heatConduct: e.target.value }, });
+                            } }></Input>
                         </FormControl>
                     </AccordionDetails>
                 </Accordion>
                 <Accordion className={classes.accordion}>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
                     >
                         <Typography>Tires</Typography>
                     </AccordionSummary>
@@ -153,22 +156,22 @@ export const SpecificationsForm = () => {
                         <FormControl color="primary" className={classes.formControl}>
                             <InputLabel>Rim diameter</InputLabel>
                             <Input value={tires.specification.rimDiameter} onChange={(e) => {
-                                setTires({...tires, specification: { ...tires.specification, rimDiameter: e.target.value}, })
-                            }}></Input>
+                                setTires({ ...tires, specification: { ...tires.specification, rimDiameter: e.target.value }, });
+                            } }></Input>
                         </FormControl>
                         <FormControl color="primary" className={classes.formControl}>
                             <InputLabel>Speed Rating</InputLabel>
                             <Input value={tires.specification.speedRating} onChange={(e) => {
-                                setTires({...tires, specification: { ...tires.specification, speedRating: e.target.value}, })
-                            }}></Input>
+                                setTires({ ...tires, specification: { ...tires.specification, speedRating: e.target.value }, });
+                            } }></Input>
                         </FormControl>
                     </AccordionDetails>
                 </Accordion>
                 <Accordion className={classes.accordion}>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
                     >
                         <Typography>Engine</Typography>
                     </AccordionSummary>
@@ -176,28 +179,28 @@ export const SpecificationsForm = () => {
                         <FormControl color="primary" className={classes.formControl}>
                             <InputLabel>Power</InputLabel>
                             <Input value={engine.specification.power} onChange={(e) => {
-                                setEngine({...engine, specification: { ...engine.specification, power: e.target.value}, })
-                            }}></Input>
+                                setEngine({ ...engine, specification: { ...engine.specification, power: e.target.value }, });
+                            } }></Input>
                         </FormControl>
                         <FormControl color="primary" className={classes.formControl}>
                             <InputLabel>Fuel consumption</InputLabel>
                             <Input value={engine.specification.fuelConsumption} onChange={(e) => {
-                                setEngine({...engine, specification: { ...engine.specification, fuelConsumption: e.target.value}, })
-                            }}></Input>
+                                setEngine({ ...engine, specification: { ...engine.specification, fuelConsumption: e.target.value }, });
+                            } }></Input>
                         </FormControl>
                         <FormControl color="primary" className={classes.formControl}>
                             <InputLabel>Acceleration</InputLabel>
                             <Input value={engine.specification.acceleration} onChange={(e) => {
-                                setEngine({...engine, specification: { ...engine.specification, acceleration: e.target.value}, })
-                            }}></Input>
+                                setEngine({ ...engine, specification: { ...engine.specification, acceleration: e.target.value }, });
+                            } }></Input>
                         </FormControl>
                     </AccordionDetails>
                 </Accordion>
                 <Accordion className={classes.accordion}>
                     <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
                     >
                         <Typography>Gearbox</Typography>
                     </AccordionSummary>
@@ -205,13 +208,13 @@ export const SpecificationsForm = () => {
                         <FormControl color="primary" className={classes.formControl}>
                             <InputLabel>Type (automatic/manual)</InputLabel>
                             <Input value={gearbox.specification.type} onChange={(e) => {
-                                setGearbox({...gearbox, specification: { ...gearbox.specification, type: e.target.value}, })
-                            }}></Input>
+                                setGearbox({ ...gearbox, specification: { ...gearbox.specification, type: e.target.value }, });
+                            } }></Input>
                         </FormControl>
                     </AccordionDetails>
                 </Accordion>
             </Grid>
             <Button className={classes.submitButton} variant="outlined">See results</Button>
-        </StyledSpecificationsForm>
+        </StyledSpecificationsForm></>
     );
 }
