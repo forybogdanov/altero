@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from './PartsForm/Home';
+import { SpecificationsForm } from './PartsForm/SpecificationsForm';
 import {ThemeProvider} from "@mui/material";
 import { theme } from "./Theme/Theme";
 
@@ -9,7 +9,7 @@ function App() {
         <ThemeProvider theme={theme}>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/home" element={<Home/>}/>
+                    <Route path="/" element={<SpecificationsForm/>}/>
                 </Routes>
             </BrowserRouter>
         </ThemeProvider>
