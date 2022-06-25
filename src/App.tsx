@@ -3,12 +3,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { SpecificationsForm } from './PartsForm/SpecificationsForm';
 import {ThemeProvider} from "@mui/material";
 import { theme } from "./Theme/Theme";
+import SimpleAccordion from './DisplayParts/SimpleAccordion'
 
 function App() {
     return (
         <ThemeProvider theme={theme}>
             <BrowserRouter>
                 <Routes>
+                    <Route path="/accordion" element={<SimpleAccordion/>}/>
                     <Route path="/" element={<SpecificationsForm/>}/>
                 </Routes>
             </BrowserRouter>

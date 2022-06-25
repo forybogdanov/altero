@@ -4,6 +4,9 @@ import { specificationsFormClasses as classes, StyledSpecificationsForm } from "
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from "react";
 import { Header } from "../Header/Header";
+import SimpleAccordion from "../DisplayParts/SimpleAccordion";
+import {Route} from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
 const brakesInput: Brakes = {
     image: "",
@@ -90,7 +93,7 @@ export const SpecificationsForm = () => {
     const [tires, setTires] = useState<Tires>(defaultTires);
     const [engine, setEngine] = useState<Engine>(defaultEngine);
     const [gearbox, setGearbox] = useState<Gearbox>(defaultGearBox);
-
+    const navigate = useNavigate();
     const onSubmit = () => {
         setBrakes(brakesInput);
         setTires(tiresInput);
@@ -214,7 +217,9 @@ export const SpecificationsForm = () => {
                     </AccordionDetails>
                 </Accordion>
             </Grid>
-            <Button className={classes.submitButton} variant="outlined">See results</Button>
+            <Button className={classes.submitButton} variant="outlined" onClick={() => {
+                navigate("/accordion");
+            }}>See results</Button>
         </StyledSpecificationsForm></>
     );
 }
