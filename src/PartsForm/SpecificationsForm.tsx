@@ -218,7 +218,7 @@ export const SpecificationsForm = () => {
                 </Accordion>
             </Grid>
             <Button className={classes.submitButton} variant="outlined" onClick={() => {
-                navigate("/accordion");
+                navigate("/notselected");
             }}>See results</Button>
         </StyledSpecificationsForm></>
     );

@@ -6,8 +6,10 @@ import topNav from "./topNav.svg";
 import detailedResult3 from './detailedResult3.svg'
 import detailedResult2 from './detailedResult2.svg'
 import * as React from "react";
+import {useNavigate} from "react-router-dom";
 
 export default function Recommendation() {
+    const navigate = useNavigate();
     return (
         <>
             <div style={{backgroundColor:"#f7f7f7" ,fontFamily:"Montserrat"}}>

@@ -14,6 +14,7 @@ import analytics from "./analytics.svg"
 import focusPoint from "./focusPoint.svg"
 import focusPointInactive from "./focusPointInactive.svg"
 import { useNavigate } from "react-router-dom"
+import result2selected from "./result2selected.svg"
 import {Route} from "react-router-dom";
 
 export default function SimpleAccordion() {
@@ -38,7 +39,7 @@ export default function SimpleAccordion() {
                 <Grid item xs={3} style={{marginTop:"150px", marginLeft:"142px"}}>
                     <img src={resultsHeader}  style={{marginTop:"3.5vh"}}/>
                     <img src={result1} style={{marginTop:"1.7vh"}}/>
-                    <img src={result2} style={{marginTop:"1.7vh"}}/>
+                    <img src={result2selected} style={{marginTop:"1.7vh"}}/>
                     <img src={result3} style={{marginTop:"1.7vh"}}/>
                     <img src={analytics}/>
                 </Grid>
