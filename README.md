@@ -3,6 +3,8 @@ Ideation and collaboration tool for OEM companies and Suppliers
   
 ![alt text](https://github.com/forybogdanov/altero/blob/main/flow_diagram.jpg)
 
+Example specification input
+
 |_key      |diameter|thickness|height|number of holes|brakeDiscType|centering|minThickness|tightening torque|Axle |width |brakingSystem|wearIndicator              |WVANumber  |FMSI     |EAN code     |numberOfPistons|position|assemblySide|axle      |
 |----------|--------|---------|------|---------------|-------------|---------|------------|-----------------|-----|------|-------------|---------------------------|-----------|---------|-------------|---------------|--------|------------|----------|
 |brakeDiscs|356 mm  |36 mm    |62 mm |5              |ventilated   |75 mm    |34,4 mm     |140 Nm           |front|      |             |                           |           |         |             |               |        |            |          |
