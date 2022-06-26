@@ -4,14 +4,17 @@ import { SpecificationsForm } from './PartsForm/SpecificationsForm';
 import {ThemeProvider} from "@mui/material";
 import { theme } from "./Theme/Theme";
 import SimpleAccordion from './DisplayParts/SimpleAccordion'
-
+import Recommendation from "./DisplayParts/Recommendation";
+import NotSelected from './DisplayParts/NotSelected'
 function App() {
     return (
         <ThemeProvider theme={theme}>
             <BrowserRouter>
                 <Routes>
+                    <Route path="/notselected" element={<NotSelected/>}/>
                     <Route path="/accordion" element={<SimpleAccordion/>}/>
                     <Route path="/" element={<SpecificationsForm/>}/>
+                    <Route path="/recommendation" element={<Recommendation/>}/>
                 </Routes>
             </BrowserRouter>
         </ThemeProvider>
