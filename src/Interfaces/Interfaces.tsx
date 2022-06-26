@@ -7,10 +7,10 @@ export interface CarPart {
 
 export interface Brakes extends CarPart {
     specification: {
-        padWear: string,
-        control: string,
-        meanFriction: string,
-        heatConduct: string,
+        brakeDiscType: string,
+        brakeDiscDiameter: string,
+        brakePadsWidth: string,
+        caliperDiameter: string,
     }
 }
 

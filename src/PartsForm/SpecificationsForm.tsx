@@ -13,10 +13,10 @@ const brakesInput: Brakes = {
     name: "brembo",
     dateOfProduction: "22.06.2022",
     specification: {
-        padWear: "12",
-        control: "20",
-        meanFriction: "100",
-        heatConduct: "34",
+        brakeDiscType: "ventilated",
+        brakeDiscDiameter: "356 mm",
+        brakePadsWidth: "193 mm",
+        caliperDiameter: "60 mm",
     },
 };
 const tiresInput: Tires = {
@@ -24,7 +24,7 @@ const tiresInput: Tires = {
     name: "Pirelli",
     dateOfProduction: "19.07.2021",
     specification: {
-        rimDiameter: "16inch",
+        rimDiameter: "16 inch",
         speedRating: "S",
     },
 };
@@ -33,9 +33,9 @@ const engineInput: Engine = {
     name: "BMW",
     dateOfProduction: "19.07.2021",
     specification: {
-        power: "250 horse power",
+        power: "250 hp",
         fuelConsumption: "9L/100km",
-        acceleration: "0-100km for 5s",
+        acceleration: "5 s",
     },
 };
 const gearBoxInput: Gearbox = {
@@ -52,10 +52,10 @@ const defaultBrakes: Brakes = {
     name: "",
     dateOfProduction: "",
     specification: {
-        padWear: "",
-        control: "",
-        meanFriction: "",
-        heatConduct: "",
+        brakeDiscType: "",
+        brakeDiscDiameter: "",
+        brakePadsWidth: "",
+        caliperDiameter: "",
     },
 };
 
@@ -122,27 +122,27 @@ export const SpecificationsForm = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                         <FormControl color="primary" className={classes.formControl}>
-                            <InputLabel>Pad wear</InputLabel>
-                            <Input value={brakes.specification.padWear} onChange={(e) => {
-                                setBrakes({ ...brakes, specification: { ...brakes.specification, padWear: e.target.value }, });
+                            <InputLabel>Brake disc type</InputLabel>
+                            <Input value={brakes.specification.brakeDiscType} onChange={(e) => {
+                                setBrakes({ ...brakes, specification: { ...brakes.specification, brakeDiscType: e.target.value }, });
                             } }></Input>
                         </FormControl>
                         <FormControl color="primary" className={classes.formControl}>
-                            <InputLabel>Control</InputLabel>
-                            <Input value={brakes.specification.control} onChange={(e) => {
-                                setBrakes({ ...brakes, specification: { ...brakes.specification, control: e.target.value }, });
+                            <InputLabel>Brake disc diameter</InputLabel>
+                            <Input value={brakes.specification.brakeDiscDiameter} onChange={(e) => {
+                                setBrakes({ ...brakes, specification: { ...brakes.specification, brakeDiscDiameter: e.target.value }, });
                             } }></Input>
                         </FormControl>
                         <FormControl color="primary" className={classes.formControl}>
-                            <InputLabel>Mean Friction</InputLabel>
-                            <Input value={brakes.specification.meanFriction} onChange={(e) => {
-                                setBrakes({ ...brakes, specification: { ...brakes.specification, meanFriction: e.target.value }, });
+                            <InputLabel>Brake pads width</InputLabel>
+                            <Input value={brakes.specification.brakePadsWidth} onChange={(e) => {
+                                setBrakes({ ...brakes, specification: { ...brakes.specification, brakePadsWidth: e.target.value }, });
                             } }></Input>
                         </FormControl>
                         <FormControl color="primary" className={classes.formControl}>
-                            <InputLabel>Heat Conduct</InputLabel>
-                            <Input value={brakes.specification.heatConduct} onChange={(e) => {
-                                setBrakes({ ...brakes, specification: { ...brakes.specification, heatConduct: e.target.value }, });
+                            <InputLabel>Caliper diameter</InputLabel>
+                            <Input value={brakes.specification.caliperDiameter} onChange={(e) => {
+                                setBrakes({ ...brakes, specification: { ...brakes.specification, caliperDiameter: e.target.value }, });
                             } }></Input>
                         </FormControl>
                     </AccordionDetails>
@@ -192,7 +192,7 @@ export const SpecificationsForm = () => {
                             } }></Input>
                         </FormControl>
                         <FormControl color="primary" className={classes.formControl}>
-                            <InputLabel>Acceleration</InputLabel>
+                            <InputLabel>Acceleration to 100km</InputLabel>
                             <Input value={engine.specification.acceleration} onChange={(e) => {
                                 setEngine({ ...engine, specification: { ...engine.specification, acceleration: e.target.value }, });
                             } }></Input>
