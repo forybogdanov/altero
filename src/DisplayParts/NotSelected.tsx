@@ -40,7 +40,7 @@ export default function SimpleAccordion() {
                     <Grid item xs={3} style={{marginTop:"150px", marginLeft:"142px"}}>
                         <img src={resultsHeader}  style={{marginTop:"3.5vh"}}/>
                         <img src={result1} style={{marginTop:"1.7vh"}}/>
-                        <img onClick={() => {setTimeout(() =>{navigate("/accordion");},1)}} src={result2} style={{marginTop:"1.7vh"}}/>
+                        <img onClick={() => {setTimeout(() =>{navigate("/accordion");},1)}} src={result2} style={{marginTop:"1.7vh",cursor:"pointer"}}/>
                         <img src={result3} style={{marginTop:"1.7vh"}}/>
                         <img src={analyticsEmpty}/>
                     </Grid>
